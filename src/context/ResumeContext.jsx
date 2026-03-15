@@ -37,6 +37,8 @@ function getBlankEntry(section) {
       return { ...base, name: '', issuer: '', date: '', credentialId: '', url: '' };
     case 'skills':
       return { ...base, category: '', items: [] };
+    case 'featuredSkills':
+      return { ...base, name: '', level: 50 };
     default:
       return base;
   }
@@ -78,7 +80,7 @@ function reducer(state, action) {
         ...state,
         resumeData: {
           ...state.resumeData,
-          [section]: [...state.resumeData[section], newEntry],
+          [section]: [...(state.resumeData[section] || []), newEntry],
         },
       };
     }

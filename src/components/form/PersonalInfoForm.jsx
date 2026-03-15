@@ -36,8 +36,22 @@ export default function PersonalInfoForm() {
         <Grid item xs={12} sm={6}>
           <TextField fullWidth size="small" label="Website" placeholder="yoursite.com" value={info.website} onChange={handleChange('website')} />
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} sm={6}>
           <TextField fullWidth size="small" label="LinkedIn" placeholder="linkedin.com/in/yourprofile" value={info.linkedin} onChange={handleChange('linkedin')} />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <TextField fullWidth size="small" label="GitHub Username" placeholder="yourusername" value={info.github || ''} onChange={handleChange('github')} />
+        </Grid>
+        <Grid item xs={12}>
+          <TextField
+            fullWidth
+            size="small"
+            label="Intro Video (YouTube URL)"
+            placeholder="https://youtube.com/watch?v=..."
+            value={info.youtube || ''}
+            onChange={handleChange('youtube')}
+            helperText="Shown in Interactive template hero section"
+          />
         </Grid>
       </Grid>
     </Box>

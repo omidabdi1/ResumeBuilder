@@ -1,13 +1,14 @@
 import { v4 as uuidv4 } from 'uuid';
 
 export const TEMPLATE_OPTIONS = [
+  { id: 'interactive', label: '✦ Interactive' },
   { id: 'classic', label: 'Classic' },
   { id: 'modern', label: 'Modern' },
   { id: 'minimal', label: 'Minimal' },
 ];
 
 export const DEFAULT_RESUME_DATA = {
-  activeTemplate: 'classic',
+  activeTemplate: 'interactive',
   sectionVisibility: {
     projects: true,
     certifications: true,
@@ -21,6 +22,8 @@ export const DEFAULT_RESUME_DATA = {
       location: 'San Francisco, CA',
       website: 'alexjohnson.dev',
       linkedin: 'linkedin.com/in/alexjohnson',
+      github: 'alexjohnson',
+      youtube: '',
     },
     summary:
       'Passionate full stack engineer with 5+ years of experience building scalable web applications. Expertise in React, Node.js, and cloud infrastructure. Proven track record of delivering high-quality software and mentoring junior developers.',
@@ -82,6 +85,14 @@ export const DEFAULT_RESUME_DATA = {
         items: ['AWS', 'Docker', 'Kubernetes', 'Git', 'PostgreSQL', 'Redis'],
       },
     ],
+    featuredSkills: [
+      { id: uuidv4(), name: 'JavaScript', level: 92 },
+      { id: uuidv4(), name: 'React', level: 90 },
+      { id: uuidv4(), name: 'Node.js', level: 85 },
+      { id: uuidv4(), name: 'TypeScript', level: 80 },
+      { id: uuidv4(), name: 'Python', level: 72 },
+      { id: uuidv4(), name: 'AWS', level: 68 },
+    ],
     projects: [
       {
         id: uuidv4(),
@@ -93,6 +104,17 @@ export const DEFAULT_RESUME_DATA = {
           'Implemented real-time collaboration using WebSockets',
         ],
         technologies: 'React, Node.js, Socket.io, MongoDB',
+      },
+      {
+        id: uuidv4(),
+        name: 'CloudDash',
+        url: 'github.com/alexj/clouddash',
+        description: 'Unified AWS resource monitoring dashboard with cost analytics.',
+        bullets: [
+          'Reduced cloud spend visibility gap by 70% for mid-size teams',
+          'Supports 15+ AWS services with real-time metrics',
+        ],
+        technologies: 'Next.js, AWS SDK, Recharts, PostgreSQL',
       },
     ],
     certifications: [

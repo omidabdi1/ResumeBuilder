@@ -5,6 +5,7 @@ import SummaryForm from './SummaryForm';
 import WorkExperienceForm from './WorkExperienceForm';
 import EducationForm from './EducationForm';
 import SkillsForm from './SkillsForm';
+import FeaturedSkillsForm from './FeaturedSkillsForm';
 import ProjectsForm from './ProjectsForm';
 import CertificationsForm from './CertificationsForm';
 
@@ -20,6 +21,8 @@ export default function FormPanel() {
       <EducationForm />
       <Divider sx={{ my: 2 }} />
       <SkillsForm />
+      <Divider sx={{ my: 2 }} />
+      <FeaturedSkillsForm />
       <Divider sx={{ my: 2 }} />
       <ProjectsForm />
       <Divider sx={{ my: 2 }} />
